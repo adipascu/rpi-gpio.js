@@ -249,7 +249,11 @@ function Gpio() {
         value = (!!value && value !== '0') ? '1' : '0';
 
         debug('writing pin %d with value %s', pin, value);
-        fs.writeFile(PATH + '/gpio' + pin + '/value', value, cb);
+        if (cb) {
+            fs.writeFile(PATH + '/gpio' + pin + '/value', value, cb);
+        } else {
+            fs.writeFileSync(PATH + '/gpio' + pin + '/value', value);
+        }
     };
 
     /**
