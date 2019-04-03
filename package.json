@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A fork of https://github.com/JamesBarwell/rpi-gpio.js",
   "main": "main.js",
-  "scripts": {
-    "prepack": "eslint ."
-  },
   "author": "mail@adipascu.ro",
   "license": "MIT",
   "repository": {
